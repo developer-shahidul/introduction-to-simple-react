@@ -1,5 +1,5 @@
 import "./App.css";
-import Counter from "./counter";
+import Counter from "./Counter";
 import Team from "./Team";
 import Friends from "./Friends";
 
