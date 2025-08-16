@@ -6,30 +6,31 @@ export default function Country({ country, handleVisitedCountries }) {
   const { name, flags, population, area, cca3 } = country;
 
   const [visited, setVisited] = useState(false);
-  console.log(handleVisitedCountries);
+  // console.log(handleVisitedCountries);
   // !visited aer mane holo true hole false hober , r false hole true hobe
-  const handleVisited = (countryName) => {
+  const handleVisited = () => {
     setVisited(!visited);
-    alert(`You are planning to visit ${countryName}!`);
   };
 
-  console.log(country);
+  const passWithParams = () => {
+    handleVisitedCountries(country);
+  };
+
+  // console.log(country);
   return (
     // string gulu class css
     <div className={`country ${visited ? "visited" : "none-visited"}`}>
       <h3 style={{ color: visited ? "purple" : "white" }}>
         Name : {name.common}
       </h3>
-      <img className="img" src={flags.png} alt="" />
+      <img className="img" src={flags.png} alt="flag" />
       <p>Population : {population}</p>
       <p>Area : {area}</p>
       <p>
         <small>Code : {cca3}</small>
       </p>
-      <button onClick={handleVisitedCountries}>Mark Visited</button>
-      <button onClick={() => handleVisited(name.common)}>
-        {visited ? "Visited" : "Going"}
-      </button>
+      <button onClick={passWithParams}>Mark Visited</button>
+      <button onClick={handleVisited}>{visited ? "Visited" : "Going"}</button>
       {visited ? "I have visited this country." : "I want to Visited"}
     </div>
   );
