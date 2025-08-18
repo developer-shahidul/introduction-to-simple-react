@@ -19,3 +19,13 @@
   background-color: bisque;
   color: black;
 }
+.flag-size {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}

@@ -18,15 +18,39 @@ const Countries = () => {
   //visited button show/// judi array hoi taile spread opretore array banate hobe push korle hobe na
 
   const [visitedCountries, setVisitedCountries] = useState([]);
+
+  //...visitedCountries → আগের সব ভিজিটেড দেশগুলো রাখে //country → নতুন ক্লিক করা দেশ যোগ করে
+  //ager golu state theke ashce
   const handleVisitedCountries = (country) => {
     console.log("add this to you  visited countries");
     const newVisitedcontries = [...visitedCountries, country];
-    setVisitedCountries(newVisitedcontries);
+    setVisitedCountries(newVisitedcontries); // state push
   };
+
+  //flag add
+
+  const [visitedFlag, setVisitedFlag] = useState([]);
+  const handleVisitedFlag = (flag) => {
+    const newFlag = [...visitedFlag, flag];
+    setVisitedFlag(newFlag);
+    // console.log(newFlag);
+  };
+
+  //remove item  from an array in a state
+  //Use filter to select all the element except the one you want to remove
 
   return (
     <div>
       <h3>Countries :{countries.length}</h3>
+      <div>
+        <h3>Flags : {visitedFlag.length}</h3>
+        <div className="flex">
+          {visitedFlag.map((flag, index) => (
+            <img key={index} className="flag-size" src={flag} alt="flag" />
+          ))}
+        </div>
+      </div>
+      {/* visited country */}
       <div>
         <h4>Visited Contries : {visitedCountries.length}</h4>
         <ul>
@@ -35,11 +59,14 @@ const Countries = () => {
           ))}
         </ul>
       </div>
+      {/* display countries */}
+      {/* //prottek ta lada alada object ke prop hishabe pathacce */}
       <div className="grid">
         {countries.map((country) => (
           <Country
             key={country.cca3}
             handleVisitedCountries={handleVisitedCountries}
+            handleVisitedFlag={handleVisitedFlag}
             country={country}
           ></Country>
         ))}
