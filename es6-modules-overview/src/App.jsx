@@ -57,7 +57,7 @@ function App() {
   //   },
   // ];
 
-  https: return (
+  return (
     <>
       <h1>Vite + React</h1>
       {/* loop throw kore chalabo  */}
