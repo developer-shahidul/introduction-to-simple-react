@@ -1,35 +1,71 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import "./App.css";
+import Watch from "./assets/Component/Watch/Watch";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [watches, setwatches] = useState([]);
+  //Watches.json file thek api data newa hoice //json stringify
+  // public folder a json file rakha
+  // useEffect(() => {
+  //   fetch("Watches.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setwatches(data));
+  // }, []);
 
-  return (
+  //github a json file baniye
+  useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/developer-shahidul/watches-data/refs/heads/main/watches.json"
+    )
+      .then((res) => res.json())
+      .then((data) => setwatches(data));
+  }, []);
+
+  //raw.githubusercontent.com/developer-shahidul/watches-data/refs/heads/main/watches.json
+  //fack data //lucal data
+  // const watches = [
+  //   { id: 1, name: "Apple watch", price: 2000 },
+  //   { id: 2, name: "Samsu watch", price: 2000 },
+  //   { id: 3, name: "MI watch", price: 2000 },
+  // ];
+
+  // const watches = [
+  //   {
+  //     id: 1,
+  //     name: "Apple Watch Series 9",
+  //     price: 399,
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Samsung Galaxy Watch 6",
+  //     price: 349,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Amazfit GTR 4",
+  //     price: 199,
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Fitbit Versa 4",
+  //     price: 229,
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Huawei Watch GT 4",
+  //     price: 249,
+  //   },
+  // ];
+
+  https: return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* loop throw kore chalabo  */}
+      {watches.map((watch, index) => (
+        <Watch key={`${watch.id}-${index}`} watch={watch}></Watch>
+      ))}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
