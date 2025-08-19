@@ -1,4 +1,5 @@
 //
+import { addToLS, getStorageCart } from "../../../utilities/LucalStorage";
 import Bottle from "../Bottle/Bottle";
 import { useEffect, useState } from "react";
 
@@ -10,13 +11,26 @@ const Bottles = () => {
       .then((data) => setBottles(data));
   }, []);
 
+  //load cart from localStorage
+
+  useEffect(() => {
+    console.log("called the use Effect", bottles.length);
+
+    if (bottles.length > 0) {
+      const storageCart = getStorageCart();
+      console.log(storageCart);
+    }
+  }, [bottles]);
+
   //
+
   const [purchasehandlerBottle, setPurchaseHandlerBottle] = useState([]);
 
   const handleAddToCart = (bottle) => {
     const newHandleAddToCart = [...purchasehandlerBottle, bottle];
     // console.log(bottle);
     setPurchaseHandlerBottle(newHandleAddToCart);
+    addToLS(bottle.id);
   };
 
   return (
