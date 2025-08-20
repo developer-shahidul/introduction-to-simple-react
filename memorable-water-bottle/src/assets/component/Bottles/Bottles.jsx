@@ -2,9 +2,12 @@
 import { addToLS, getStorageCart } from "../../../utilities/LucalStorage";
 import Bottle from "../Bottle/Bottle";
 import { useEffect, useState } from "react";
+import Cart from "../Cart/Cart";
 
 const Bottles = () => {
   const [bottles, setBottles] = useState([]);
+  const [cartBottles, setCartBottles] = useState([]); // Cart state আলাদা
+
   useEffect(() => {
     fetch("Bottle.json")
       .then((res) => res.json())
@@ -14,22 +17,29 @@ const Bottles = () => {
   //load cart from localStorage
 
   useEffect(() => {
-    console.log("called the use Effect", bottles.length);
+    // console.log("called the use Effect", bottles.length);
 
     if (bottles.length > 0) {
       const storageCart = getStorageCart();
-      console.log(storageCart);
+      // console.log(storageCart, bottles);
+      const saveCart = [];
+      for (const id of storageCart) {
+        const bottle = bottles.find((bottle) => bottle.id === id);
+        if (bottle) {
+          saveCart.push(bottle);
+        }
+        setCartBottles(saveCart);
+      }
+      // console.log("save cart", saveCart);
     }
   }, [bottles]);
 
   //
 
-  const [purchasehandlerBottle, setPurchaseHandlerBottle] = useState([]);
-
   const handleAddToCart = (bottle) => {
-    const newHandleAddToCart = [...purchasehandlerBottle, bottle];
+    const newHandleAddToCart = [...cartBottles, bottle];
     // console.log(bottle);
-    setPurchaseHandlerBottle(newHandleAddToCart);
+    setCartBottles(newHandleAddToCart);
     addToLS(bottle.id);
   };
 
@@ -37,7 +47,7 @@ const Bottles = () => {
     <div>
       <h2>Bottle Here : {bottles.length}</h2>
       <div>
-        <h2>Bottle purchase : {purchasehandlerBottle.length}</h2>
+        <Cart cart={cartBottles}></Cart>
       </div>
 
       <div className="bottles-container">
