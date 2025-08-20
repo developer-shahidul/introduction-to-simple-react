@@ -1,8 +1,13 @@
 //
-import { addToLS, getStorageCart } from "../../../utilities/LucalStorage";
+import {
+  addToLS,
+  getStorageCart,
+  removeFromLS,
+} from "../../../utilities/LucalStorage";
 import Bottle from "../Bottle/Bottle";
-import { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
+
+import { useEffect, useState } from "react";
 
 const Bottles = () => {
   const [bottles, setBottles] = useState([]);
@@ -43,11 +48,24 @@ const Bottles = () => {
     addToLS(bottle.id);
   };
 
+  //remove cart
+
+  const handleRemoveFromCart = (id) => {
+    // visual cart remove
+    const remainingCart = cartBottles.filter((bottle) => bottle.id !== id);
+    setCartBottles(remainingCart);
+    // remove from LS
+    removeFromLS(id);
+  };
+
   return (
     <div>
       <h2>Bottle Here : {bottles.length}</h2>
       <div>
-        <Cart cart={cartBottles}></Cart>
+        <Cart
+          handleRemoveFromCart={handleRemoveFromCart}
+          cart={cartBottles}
+        ></Cart>
       </div>
 
       <div className="bottles-container">
