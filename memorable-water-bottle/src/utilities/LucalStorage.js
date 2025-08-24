@@ -21,9 +21,12 @@ const removeFromLS = (id) => {
 };
 
 const addToLS = (id) => {
-  const cart = getStorageCart();
-  cart.push(id);
-  ///save to localStorage
-  saveCartToLS(cart);
+  const cart = getStorageCart(); // 1️⃣ আগে লোকালস্টোরেজ থেকে cart নামের array বের করে আনা হচ্ছে
+  cart.push(id); // 2️⃣ cart array এর মধ্যে নতুন id (মানে নতুন item) যোগ করা হচ্ছে
+
+  // save to lucalstorage
+
+  saveCartToLS(cart); // 3️⃣ updated cart আবার localStorage-এ save করে রাখা হচ্ছে
 };
+
 export { addToLS, getStorageCart, removeFromLS };

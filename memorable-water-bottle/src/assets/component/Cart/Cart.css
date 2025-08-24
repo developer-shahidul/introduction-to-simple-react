@@ -3,3 +3,13 @@
   background-size: contain;
   margin-right: 10px;
 }
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cart-container2 {
+  width: 100px;
+  background-size: contain;
+  margin-right: 10px;
+}

@@ -1,4 +1,4 @@
-const Header = () => {
+const Headers = () => {
   return (
     <div>
       <h1>Memorable Water bottle</h1>
@@ -6,4 +6,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Headers;
