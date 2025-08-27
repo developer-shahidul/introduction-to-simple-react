@@ -1,12 +1,12 @@
+/* সব import অবশ্যই একদম উপরে */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "tailwindcss";
 
-/* font use  */
-
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
-
+/* font use */
 body {
   font-family: "Exo 2", sans-serif;
 }
