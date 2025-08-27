@@ -11,12 +11,23 @@ function App() {
     setBookmarks(newBookmarks);
     // console.log(blog);
   };
+
+  // jeheto time aer defult man 0
+  const [readingTime, setReadingTime] = useState(0);
+  const handleMarkAsRead = (time) => {
+    const newMarkAsRead = readingTime + time;
+    setReadingTime(newMarkAsRead);
+    console.log(readingTime);
+  };
   return (
     <>
       <Header></Header>
       <div className="md:flex max-w-7xl mx-auto gap-6">
-        <Blogs handleAddToBookmarks={handleAddToBookmarks}></Blogs>
-        <Bookmarks bookmark={bookmarks}></Bookmarks>
+        <Blogs
+          handleAddToBookmarks={handleAddToBookmarks}
+          handleMarkAsRead={handleMarkAsRead}
+        ></Blogs>
+        <Bookmarks bookmark={bookmarks} readingTime={readingTime}></Bookmarks>
       </div>
     </>
   );

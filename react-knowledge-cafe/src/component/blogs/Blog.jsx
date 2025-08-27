@@ -1,7 +1,7 @@
 //
 import { FaRegBookmark } from "react-icons/fa";
 
-const Blog = ({ blog, handleAddToBookmarks }) => {
+const Blog = ({ blog, handleAddToBookmarks, handleMarkAsRead }) => {
   //   console.log(blog);
 
   const {
@@ -50,7 +50,10 @@ const Blog = ({ blog, handleAddToBookmarks }) => {
           </span>
         ))}
       </p>
-      <button className="hover:underline mb-9">
+      <button
+        onClick={() => handleMarkAsRead(parseInt(reading_time))}
+        className="hover:underline mb-9 text-purple-600"
+      >
         <small>mark as read</small>
       </button>
     </div>

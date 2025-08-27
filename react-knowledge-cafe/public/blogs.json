@@ -6,7 +6,7 @@
     "author": "John Doe",
     "author_img": "https://i.pravatar.cc/100?img=1",
     "posted_date": "August 01, 2025",
-    "reading_time": "8 min read",
+    "reading_time": "8",
     "hashtags": ["#Photography", "#Camera", "#Beginner"]
   },
   {
@@ -16,7 +16,7 @@
     "author": "Sarah Ali",
     "author_img": "https://i.pravatar.cc/100?img=2",
     "posted_date": "August 05, 2025",
-    "reading_time": "6 min read",
+    "reading_time": "6",
     "hashtags": ["#Food", "#Dhaka", "#StreetFood"]
   },
   {
@@ -26,7 +26,7 @@
     "author": "Michael Smith",
     "author_img": "https://i.pravatar.cc/100?img=3",
     "posted_date": "August 10, 2025",
-    "reading_time": "10 min read",
+    "reading_time": "10",
     "hashtags": ["#Finance", "#Budgeting", "#StudentLife"]
   },
   {
@@ -36,7 +36,7 @@
     "author": "Emily Johnson",
     "author_img": "https://i.pravatar.cc/100?img=14",
     "posted_date": "August 15, 2025",
-    "reading_time": "9 min read",
+    "reading_time": "9",
     "hashtags": ["#Moon", "#Astrophotography", "#NightSky"]
   },
   {
@@ -46,7 +46,7 @@
     "author": "David Brown",
     "author_img": "https://i.pravatar.cc/100?img=5",
     "posted_date": "August 20, 2025",
-    "reading_time": "7 min read",
+    "reading_time": "7",
     "hashtags": ["#Weather", "#Climate", "#Science"]
   }
 ]

@@ -2,7 +2,7 @@
 import Blog from "./Blog";
 import { useEffect, useState } from "react";
 
-const Blogs = ({ handleAddToBookmarks }) => {
+const Blogs = ({ handleAddToBookmarks, handleMarkAsRead }) => {
   const [blogs, setBlogs] = useState([]);
 
   // useEffect a jeheto amora akbar oi data load korbo tai akta emty arry dilam, []
@@ -21,6 +21,7 @@ const Blogs = ({ handleAddToBookmarks }) => {
         <Blog
           key={blog.id}
           handleAddToBookmarks={handleAddToBookmarks}
+          handleMarkAsRead={handleMarkAsRead}
           blog={blog}
         ></Blog>
       ))}
