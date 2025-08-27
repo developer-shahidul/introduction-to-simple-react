@@ -33,7 +33,10 @@ const Blog = ({ blog, handleAddToBookmarks }) => {
 
         <div className="flex gap-2 text-xl font-medium text-[#11111160]">
           <span>{reading_time} min read</span>
-          <button className="text-2xl" onClick={handleAddToBookmarks}>
+          <button
+            className="text-2xl"
+            onClick={() => handleAddToBookmarks(blog)}
+          >
             <FaRegBookmark></FaRegBookmark>
           </button>
         </div>
