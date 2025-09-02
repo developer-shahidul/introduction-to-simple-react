@@ -5,8 +5,8 @@ import Banner from "./Banner";
 const Nav = () => {
   return (
     <div>
-      <nav className="flex flex-row  justify-around items-center text-center backdrop-blur-[450px] fixed top-0 left-0 z-50 w-full">
-        <div>
+      <nav className="md:flex flex-row  justify-around items-center text-center backdrop-blur-[450px] fixed top-0 left-0 z-50 w-full">
+        <div className="mb-5 md:md-0">
           <img
             className="w-[72px] h-[72px] object-cover mx-auto"
             src={logo}
@@ -15,7 +15,7 @@ const Nav = () => {
         </div>
 
         <div>
-          <ul className="flex-row md:flex justify-between items-center gap-12">
+          <ul className="grid grid-cols-2 md:grid-flow-col  justify-between items-center gap-12">
             <li>Home</li>
             <li>Fixture</li>
             <li>Teams</li>

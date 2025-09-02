@@ -4,7 +4,7 @@ import team from "../../assets/team.jpg";
 
 const Banner = () => {
   return (
-    <div className="mt-6 w-4/5 mx-auto pt-20">
+    <div className="mt-6 w-4/5 mx-auto pt-20 mb-20">
       <div
         className="w-full  md:h-lvh bg-cover bg-center mx-auto content-center rounded-2xl overflow-hidden py-10 "
         style={{
