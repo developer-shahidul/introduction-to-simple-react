@@ -1,12 +1,11 @@
 import React from "react";
 import logo from "../../assets/football-logo.jpg";
-import Banner from "./Banner";
 
 const Nav = () => {
   return (
     <div>
       <nav className="md:flex flex-row  justify-around items-center text-center backdrop-blur-[450px] fixed top-0 left-0 z-50 w-full">
-        <div className="mb-5 md:md-0">
+        <div className="mb-5 md:mb-0 ">
           <img
             className="w-[72px] h-[72px] object-cover mx-auto"
             src={logo}
@@ -24,7 +23,6 @@ const Nav = () => {
           </ul>
         </div>
       </nav>
-      <Banner></Banner>
     </div>
   );
 };
