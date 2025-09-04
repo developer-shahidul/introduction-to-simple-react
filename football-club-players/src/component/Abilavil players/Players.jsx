@@ -65,7 +65,7 @@ const Players = () => {
                     placeholder="Enter your email"
                   />
                   <button
-                    className="text-base font-bold text-[#131313] py-[18px] px-[30px] rounded-xl md:flex w-full 
+                    className="text-base font-bold text-[#131313] py-[18px] px-[30px] rounded-xl md:flex 
                     bg-gradient-to-r from-[#f19bb3] to-[#f5c451]
                     "
                     type="submit"
