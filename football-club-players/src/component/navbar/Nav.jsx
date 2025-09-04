@@ -19,7 +19,7 @@ const Nav = () => {
             <li>Fixture</li>
             <li>Teams</li>
             <li>Schedules</li>
-            <li className="px-5 py-4 border rounded-xl">0 Coin $</li>
+            <li className="px-5 py-4 md:border rounded-xl">0 Coin $</li>
           </ul>
         </div>
       </nav>

@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Lionel Messi",
+    "author_img": "https://imageio.forbes.com/specials-images/imageserve/663e595b4509f97fdafb95f5/0x0.jpg?format=jpg&crop=383,383,x1045,y23,safe&height=416&width=416&fit=bounds",
     "country": "Argentina",
     "flag": "https://flagcdn.com/w320/ar.png",
     "role": "Right Winger",
@@ -14,6 +15,7 @@
   {
     "id": 2,
     "name": "Cristiano Ronaldo",
+    "author_img": "https://img.a.transfermarkt.technology/portrait/big/8198-1748102259.jpg?lm=1",
     "country": "Portugal",
     "flag": "https://flagcdn.com/w320/pt.png",
     "role": "Striker",
@@ -26,6 +28,7 @@
   {
     "id": 3,
     "name": "Kylian Mbappé",
+    "author_img": "https://img.a.transfermarkt.technology/portrait/big/342229-1682683695.jpg?lm=1",
     "country": "France",
     "flag": "https://flagcdn.com/w320/fr.png",
     "role": "Left Winger",
@@ -38,6 +41,8 @@
   {
     "id": 4,
     "name": "Erling Haaland",
+    "author_img": "https://img.a.transfermarkt.technology/portrait/big/418560-1709108116.png?lm=1",
+
     "country": "Norway",
     "flag": "https://flagcdn.com/w320/no.png",
     "role": "Striker",
@@ -50,6 +55,8 @@
   {
     "id": 5,
     "name": "Kevin De Bruyne",
+    "author_img": "https://img.a.transfermarkt.technology/portrait/big/88755-1713391485.jpg?lm=1",
+
     "country": "Belgium",
     "flag": "https://flagcdn.com/w320/be.png",
     "role": "Central Midfielder",
@@ -62,6 +69,8 @@
   {
     "id": 6,
     "name": "Virgil van Dijk",
+    "author_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvZ5tlwcyX69noUottK0EDi6CZJS76ds-vqw&s",
+
     "country": "Netherlands",
     "flag": "https://flagcdn.com/w320/nl.png",
     "role": "Centre-Back",
@@ -74,6 +83,8 @@
   {
     "id": 7,
     "name": "Mohamed Salah",
+    "author_img": "https://img.a.transfermarkt.technology/portrait/big/148455-1727337594.jpg?lm=1",
+
     "country": "Egypt",
     "flag": "https://flagcdn.com/eg.svg",
     "role": "Forward",
@@ -86,6 +97,8 @@
   {
     "id": 8,
     "name": "Robert Lewandowski",
+    "author_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/2019147183134_2019-05-27_Fussball_1.FC_Kaiserslautern_vs_FC_Bayern_M%C3%BCnchen_-_Sven_-_1D_X_MK_II_-_0228_-_B70I8527_%28cropped%29.jpg/250px-2019147183134_2019-05-27_Fussball_1.FC_Kaiserslautern_vs_FC_Bayern_M%C3%BCnchen_-_Sven_-_1D_X_MK_II_-_0228_-_B70I8527_%28cropped%29.jpg",
+
     "country": "Poland",
     "flag": "https://flagcdn.com/pl.svg",
     "role": "Forward",
@@ -98,6 +111,8 @@
   {
     "id": 9,
     "name": "Sergio Ramos",
+    "author_img": "https://img.a.transfermarkt.technology/portrait/big/25557-1694502812.jpg?lm=1",
+
     "country": "Spain",
     "flag": "https://flagcdn.com/es.svg",
     "role": "Defender",
@@ -110,18 +125,22 @@
   {
     "id": 10,
     "name": "Luka Modrić",
+    "author_img": "https://img.a.transfermarkt.technology/portrait/big/27992-1687776160.jpg?lm=1",
+
     "country": "Croatia",
     "flag": "https://flagcdn.com/hr.svg",
     "role": "Midfielder",
     "preferred_foot": "Right Foot (Dominant)",
     "price": "$70000000",
-    "img": "https://www.iffhs.com/storage/img/posts/IMG_0469.JPG",
+    "img": "https://assets-us-01.kc-usercontent.com/31dbcbc6-da4c-0033-328a-d7621d0fa726/3ce99de4-25cd-4957-95bb-6b00777864b6/Plantilla.png?ver=03-06-2025?w=3840&q=75",
     "club": "Real Madrid",
     "club_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/250px-Real_Madrid_CF.svg.png"
   },
   {
     "id": 11,
     "name": "Harry Kane",
+    "author_img": "https://upload.wikimedia.org/wikipedia/commons/9/91/Harry_Kane_on_October_10%2C_2023.jpg",
+
     "country": "England",
     "flag": "https://flagcdn.com/gb.svg",
     "role": "Forward",
@@ -132,8 +151,10 @@
     "club_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg/1200px-FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg.png"
   },
   {
-    "id": 20,
+    "id": 12,
     "name": "Emiliano Martínez",
+    "author_img": "https://i2-prod.manchestereveningnews.co.uk/article31718345.ece/ALTERNATES/s1200/0_Manchester-City-FC-v-Aston-Villa-FC-Premier-League.jpg",
+
     "country": "Argentina",
     "flag": "https://flagcdn.com/w40/ar.png",
     "role": "Goalkeeper",
@@ -146,18 +167,22 @@
   {
     "id": 13,
     "name": "Karim Benzema",
+    "author_img": "https://img.a.transfermarkt.technology/portrait/big/18922-1702414196.jpg?lm=1",
+
     "country": "France",
     "flag": "https://flagcdn.com/fr.svg",
     "role": "Forward",
     "preferred_foot": "Right Foot (Dominant)",
     "price": "$75000000",
-    "img": "https://newafricanmagazine.com/wordpress/wp-content/uploads/2021/06/000_8WT63Q-scaled-e1623237506605.jpeg",
+    "img": "https://media.cnn.com/api/v1/images/stellar/prod/221017111358-01-karim-benzema.jpg?c=16x9&q=h_833,w_1480,c_fill",
     "club": "Al-Ittihad",
     "club_logo": "https://volleybox.net/media/upload/teams/15192207297HUMj.png"
   },
   {
     "id": 14,
     "name": "Joshua Kimmich",
+    "author_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQIvjiJzDcs01vM9fpXvPwweX-21-f_vWLRqSm5qpI92hfLn6EW2x-pkFven4Y5nbZSTs&usqp=CAU",
+
     "country": "Germany",
     "flag": "https://flagcdn.com/de.svg",
     "role": "Midfielder",
@@ -170,6 +195,8 @@
   {
     "id": 15,
     "name": "Hamza Choudhury",
+    "author_img": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/2C66/production/_131566311_gettyimages-1701731961.jpg",
+
     "country": "Bangladesh",
     "flag": "https://flagcdn.com/bd.svg",
     "role": "Midfielder",
@@ -182,6 +209,8 @@
   {
     "id": 16,
     "name": "Sadio Mané",
+    "author_img": "https://img.bundesliga.com/tachyon/sites/2/2022/07/fcb_mane_training_day1_1920.jpg?crop=210px%2C5px%2C1211px%2C969px",
+
     "country": "Senegal",
     "flag": "https://flagcdn.com/sn.svg",
     "role": "Forward",
@@ -194,6 +223,8 @@
   {
     "id": 17,
     "name": "Luka Jovic",
+    "author_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzX0OaXRUKMiJRJpn3o1NozY4uLRMVwNKoKsVtgttuQ-ewaWEHoDIw6hecddj1dD89DZg&usqp=CAU",
+
     "country": "Serbia",
     "flag": "https://flagcdn.com/rs.svg",
     "role": "Forward",
@@ -206,6 +237,8 @@
   {
     "id": 18,
     "name": "Paul Pogba",
+    "author_img": "https://talksport.com/wp-content/uploads/sites/5/2025/06/crop-1563123.jpg?strip=all&w=960",
+
     "country": "France",
     "flag": "https://flagcdn.com/fr.svg",
     "role": "Midfielder",
@@ -218,6 +251,8 @@
   {
     "id": 19,
     "name": "Gerard Piqué",
+    "author_img": "https://hips.hearstapps.com/hmg-prod/images/gerard-pique-president-of-kings-league-looks-on-during-the-news-photo-1741081910.pjpeg?crop=0.669xw:1.00xh;0.119xw,0&resize=640:*",
+
     "country": "Spain",
     "flag": "https://flagcdn.com/es.svg ",
     "role": "Defender",
@@ -230,6 +265,8 @@
   {
     "id": 20,
     "name": "Andrés Iniesta",
+    "author_img": "https://i.pinimg.com/474x/43/ac/6b/43ac6b3fc16ec8df4c07c1c78e9dab7a.jpg",
+
     "country": "Spain",
     "flag": "https://flagcdn.com/es.svg",
     "role": "Midfielder",
@@ -238,5 +275,18 @@
     "img": "https://tmssl.akamaized.net//images/foto/galerie/andres-iniesta-vissel-kobe-1656582263-87739.jpg",
     "club": "Vissel Kobe",
     "club_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vissel_Kobe_logo.svg/250px-Vissel_Kobe_logo.svg.png"
+  },
+  {
+    "id": 21,
+    "name": "Neymar Jr",
+    "author_img": "https://icdn.psgtalk.com/wp-content/uploads/2020/08/Neymar-training-PSG-vs-Bayern-Munich-Champions-League-2020.jpg",
+    "country": "Brazil",
+    "flag": "https://t3.ftcdn.net/jpg/00/62/19/84/360_F_62198499_Xk6MXhdLcclEFnAJVuzNPs4Q484BUUQs.jpg",
+    "role": "Forward",
+    "preferred_foot": "Right Foot (Dominant)",
+    "price": "$60000000",
+    "img": "https://images.ctfassets.net/3mv54pzvptwz/55YLwKPDnRXkqMBITRpWbC/0c2aefc04afa455c20e9ca0d209698e0/53174188191_42d4c831ae_o.jpg  ",
+    "club": "Al Hilal",
+    "club_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/Al-Hilal_FC_Logo.svg/250px-Al-Hilal_FC_Logo.svg.png"
   }
 ]
