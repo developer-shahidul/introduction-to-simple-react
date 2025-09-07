@@ -1,17 +1,18 @@
 //
+
 import bg from "../../assets/bg-shadow.png";
 import team from "../../assets/team.jpg";
 
-const Banner = () => {
+const Banner = ({ handlerFreeCradit }) => {
   return (
     <div className="md:mt-6 mt-56 md:w-4/5 mx-auto pt-20 mb-20 px-2 md:px-0">
       <div
-        className="w-full  md:h-[550px] bg-cover bg-center mx-auto content-center rounded-2xl overflow-hidden py-10 "
+        className="w-full  md:h-[550px] bg-cover bg-center mx-auto content-center rounded-2xl overflow-hidden  "
         style={{
           backgroundImage: `
     url(${bg}),
-    linear-gradient(to top left, black 30%, transparent 100%),
-    linear-gradient(to bottom right, black 30%, transparent 100%)
+    linear-gradient(to top left, rgb(19, 19, 19) 30%, transparent 100%),
+    linear-gradient(to bottom right, rgb(19, 19, 19) 30%, transparent 100%)
   `,
         }}
       >
@@ -28,6 +29,7 @@ const Banner = () => {
             </p>
             <div className="p-2 border max-w-max rounded-xl mx-auto">
               <button
+                onClick={handlerFreeCradit}
                 className="px-5 py-[14px] border rounded-xl shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)] border-none
                bg-gradient-to-l from-[rgb(250_203_86)] to-[rgba(234_169_195)] text-base font-bold text-[#131313]"
               >

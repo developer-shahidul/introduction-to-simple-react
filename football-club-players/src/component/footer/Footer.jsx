@@ -1,11 +1,11 @@
 //
-import logo from "../../assets/football-logo.jpg";
+import logo from "../../assets/football-logo3.jpg";
 
 const Footer = () => {
   return (
-    <div className="w-full pt-[240px] bg-black z-0">
+    <div className="w-full pt-[240px] bg-[#06091A] z-0">
       <div className="w-4/5 mx-auto pb-16">
-        <div className="h-36 w-36 mx-auto mb-16">
+        <div className="h-36 w-36 mx-auto mb-16 shadow-red-300  shadow-lg">
           <img
             className="h-full w-full object-cover"
             src={logo}
@@ -27,11 +27,19 @@ const Footer = () => {
           <div className="text-white">
             <h3 className=" mb-4 text-[18px] font-semibold">Quick Links</h3>
             <div>
-              <ul>
-                <li className=" text-white/60 text-base w-[291px]">Home</li>
-                <li className=" text-white/60 text-base w-[291px]">Services</li>
-                <li className=" text-white/60 text-base w-[291px]">About</li>
-                <li className=" text-white/60 text-base w-[291px]">Contact</li>
+              <ul className="list-disc w-[291px] list-inside">
+                <li className=" text-white/60 text-base ">
+                  <a href="">Home</a>
+                </li>
+                <li className=" text-white/60 text-base ">
+                  <a href="">Services</a>
+                </li>
+                <li className=" text-white/60 text-base ">
+                  <a href="">About</a>
+                </li>
+                <li className=" text-white/60 text-base ">
+                  <a href="">Contact</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -42,7 +50,7 @@ const Footer = () => {
                 Subscribe to our newsletter for the latest updates.
               </h5>
               <div>
-                <from className=" border rounded-xl overflow-hidden flex">
+                <form className=" border rounded-xl overflow-hidden flex">
                   <input
                     className="py-[18px] px-[32px]  text-base font-normal bg-white text-[#13131340] w-full  md:mb-0"
                     type="email"
@@ -56,7 +64,7 @@ const Footer = () => {
                   >
                     Subscribe
                   </button>
-                </from>
+                </form>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 //
 
-const Player = ({ player }) => {
+const Player = ({ player, handleChoosePlayer }) => {
   // destructuring
   //   console.log(player);
   const { name, country, flag, role, preferred_foot, price, img, author_img } =
@@ -53,7 +53,10 @@ const Player = ({ player }) => {
             <h4 className="text-base font-semibold text-[#131313]">
               Price: {price}
             </h4>
-            <button className="px-4 py-[9px] rounded-lg border text-sm font-normal text-[#131313]">
+            <button
+              onClick={() => handleChoosePlayer(player.id)}
+              className="px-4 py-[9px] rounded-lg border text-sm font-normal text-[#131313] hover:bg-[#E7FE29]"
+            >
               Choose Player
             </button>
           </div>

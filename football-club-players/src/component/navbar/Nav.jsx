@@ -1,10 +1,13 @@
 import React from "react";
 import logo from "../../assets/football-logo.jpg";
 
-const Nav = () => {
+const Nav = ({ freeCradit }) => {
   return (
     <div>
-      <nav className="md:flex flex-row  justify-around items-center text-center backdrop-blur-[450px] fixed top-0 left-0 z-50 w-full">
+      <nav
+        className="md:flex flex-row  justify-between items-center text-center backdrop-blur-3xl
+      fixed top-0 left-0 z-50 w-full opacity-100 px-48"
+      >
         <div className="mb-5 md:mb-0 ">
           <img
             className="w-[72px] h-[72px] object-cover mx-auto"
@@ -15,11 +18,21 @@ const Nav = () => {
 
         <div>
           <ul className="grid grid-cols-2 md:grid-flow-col  justify-between items-center gap-12">
-            <li>Home</li>
-            <li>Fixture</li>
-            <li>Teams</li>
-            <li>Schedules</li>
-            <li className="px-5 py-4 md:border rounded-xl">0 Coin $</li>
+            <li className="text-black text-base">
+              <a href="">Home</a>
+            </li>
+            <li className="text-black text-base">
+              <a href="">Fixture</a>
+            </li>
+            <li className="text-black text-base">
+              <a href="">Teams</a>
+            </li>
+            <li className="text-black text-base">
+              <a href="">Schedules</a>
+            </li>
+            <li className="px-5 py-4 md:border rounded-xl ">
+              {freeCradit}$ Coin 🪙
+            </li>
           </ul>
         </div>
       </nav>

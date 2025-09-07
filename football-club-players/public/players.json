@@ -7,7 +7,7 @@
     "flag": "https://flagcdn.com/w320/ar.png",
     "role": "Right Winger",
     "preferred_foot": "Left Foot (Dominant)",
-    "price": 15000000,
+    "price": "$15000000",
     "img": "https://www.highlandernews.org/wp-content/uploads/Sports_Messi1_Courtesy-of-Hossein-Zohrevand-via-Wikimedia-Commons-under-CC-BY-4.0.jpg",
     "club": "Inter Miami",
     "club_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Inter_Miami_CF_logo.svg/250px-Inter_Miami_CF_logo.svg.png"
@@ -20,7 +20,7 @@
     "flag": "https://flagcdn.com/w320/pt.png",
     "role": "Striker",
     "preferred_foot": "Right Foot (Dominant)",
-    "price": 12000000,
+    "price": "$12000000",
     "img": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/ff39/live/1ad14330-51f3-11f0-a905-01a82a8086fe.jpg",
     "club": "Al Nassr",
     "club_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTduLC2vphhpDXbu4S9MMbKAEENMQQ1Q6HyXw&s"
@@ -33,7 +33,7 @@
     "flag": "https://flagcdn.com/w320/fr.png",
     "role": "Left Winger",
     "preferred_foot": "Right Foot (Dominant)",
-    "price": 18000000,
+    "price": "$18000000",
     "img": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F790a9c7f-6719-44e9-b285-eb268b16b910.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "club": "Real Madrid",
     "club_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/250px-Real_Madrid_CF.svg.png"
@@ -47,7 +47,7 @@
     "flag": "https://flagcdn.com/w320/no.png",
     "role": "Striker",
     "preferred_foot": "Left Foot (Dominant)",
-    "price": 16000000,
+    "price": "$16000000",
     "img": "https://static.independent.co.uk/2023/10/07/11/660aa9768c062ec4457ce59ca631bfbeY29udGVudHNlYXJjaGFwaSwxNjk2NzU5ODM0-2.73788912.jpg",
     "club": "Manchester City",
     "club_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png"
@@ -61,7 +61,7 @@
     "flag": "https://flagcdn.com/w320/be.png",
     "role": "Central Midfielder",
     "preferred_foot": "Right Foot (Dominant)",
-    "price": 11000000,
+    "price": "$11000000",
     "img": "https://images2.minutemediacdn.com/image/upload/c_crop,w_3053,h_1717,x_0,y_0/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/si/01jvhr49bt8czgw2rs1j.jpg",
     "club": "Manchester City",
     "club_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png"
@@ -75,7 +75,7 @@
     "flag": "https://flagcdn.com/w320/nl.png",
     "role": "Centre-Back",
     "preferred_foot": "Right Foot (Dominant)",
-    "price": 9000000,
+    "price": "$9000000",
     "img": "https://image-service.onefootball.com/transform?w=280&h=210&dpr=2&image=https%3A%2F%2Ficdn.empireofthekop.com%2Fwp-content%2Fuploads%2F2025%2F03%2Fvirgil-van-dijk-1.jpg",
     "club": "Liverpool",
     "club_logo": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg"
