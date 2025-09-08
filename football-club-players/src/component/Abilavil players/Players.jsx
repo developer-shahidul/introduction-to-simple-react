@@ -7,6 +7,12 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Players = ({ freeCradit, setFreeCradit }) => {
   const [players, setPlayers] = useState([]);
+  // choose players
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
+  // showtab
+  const [showtabs, setShowtabs] = useState(true);
+  // not selected gulu show hobe
+  const [showOnlyNotSelected, setShowOnlyNotSelected] = useState(false);
 
   // load json fetch
   useEffect(() => {
@@ -18,29 +24,49 @@ const Players = ({ freeCradit, setFreeCradit }) => {
   const notify = () => toast.warning("You can select maximum 11 players!");
   const notify2 = () => toast.warning("You don't have enough money!");
 
-  // showtab
-  const [showtabs, setShowtabs] = useState(true);
-
+  // all data show
   const handleAvailable = () => setShowtabs(true);
   const handleSelected = () => setShowtabs(false);
   const tabToggleBg = (bg) => {
     return showtabs === bg ? "bg-[#E7FE29]" : "";
   };
 
-  // choose players
-  const [selectedPlayers, setSelectedPlayers] = useState([]);
+  // not selected tabs
+  const notSelectedPlayers = players.filter(
+    (player) => !selectedPlayers.find((p) => p.id === player.id)
+  );
 
+  // “Add More Player” click → setShowOnlyNotSelected(true) → render-এ filter হয়।
+  // Available tab-এ শুধু not selected players দেখায়।
+  // add more player
+
+  const handleAddMorePlayer = () => {
+    setShowtabs(true);
+    setShowOnlyNotSelected(true);
+  };
+
+  /////////////////////////////////////////////
   // delete select player
   const handelDeletBtn = (id) => {
     // console.log("delet select palyer");
     const remainingplayer = selectedPlayers.filter((p) => p.id !== id);
-
+    toast.warning("Player removed");
     setSelectedPlayers(remainingplayer);
   };
 
   const handleChoosePlayer = (id) => {
     // console.log(id);
     const selectId = players.find((player) => player.id === id);
+    if (!selectId) return;
+
+    // judi player id mile jai taile 1 jon oi nibe , warning dibe
+    const existingplayer = selectedPlayers.find((p) => p.id === id);
+    if (existingplayer) {
+      toast.warning(
+        `Congratulation !!! ${selectId.name}  is already in your squad!`
+      );
+      return;
+    }
 
     // price আছে কিনা check
     if (!selectId.price) {
@@ -48,11 +74,6 @@ const Players = ({ freeCradit, setFreeCradit }) => {
       return;
     }
 
-    if (selectedPlayers.length >= 11) {
-      // player 11 jon nibe , aer beshi hole alart chole ashbe
-      notify();
-      return;
-    }
     const priceStr = selectId.price;
     const priceNum = Number(priceStr.replace(/[^0-9.]/g, ""));
     if (isNaN(priceNum)) {
@@ -64,17 +85,21 @@ const Players = ({ freeCradit, setFreeCradit }) => {
       return;
     }
 
-    if (!selectId) return;
-
-    if (selectedPlayers.find((p) => p.id === id)) return;
+    // player 11 jon nibe , aer beshi hole alart chole ashbe
+    if (selectedPlayers.length >= 11) {
+      notify();
+      return;
+    }
 
     // console.log(newSelected);
     const newSelected = [...selectedPlayers, selectId];
     setSelectedPlayers(newSelected);
 
     // freeCradit aer jonno
-
     setFreeCradit(freeCradit - priceNum);
+
+    // player add hole sonbordona janabe
+    toast.success(`Congratulation !!! ${selectId.name} is now is your squad`);
   };
 
   return (
@@ -108,17 +133,23 @@ const Players = ({ freeCradit, setFreeCradit }) => {
           <div>
             <div className="py-3">
               <h5 className="text-[28px] font-bold text-[#131313]">
-                Available Players
+                {/* judi showOnlyNotSelected a kiso pawa jai taile admore na paile Available  */}
+
+                {showOnlyNotSelected ? "Add More Players" : "Available Players"}
               </h5>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-6">
-              {players.map((player, index) => (
-                <Player
-                  key={`${player.id}-${index}`}
-                  handleChoosePlayer={handleChoosePlayer}
-                  player={player}
-                />
-              ))}
+              {/* judi showOnlyNotSelected a kiso pawa jai taile notSelectedPlayers na paile players arrow call hobe  */}
+
+              {(showOnlyNotSelected ? notSelectedPlayers : players).map(
+                (player, index) => (
+                  <Player
+                    key={`${player.id}-${index}`}
+                    handleChoosePlayer={handleChoosePlayer}
+                    player={player}
+                  />
+                )
+              )}
             </div>
           </div>
         )}
@@ -142,7 +173,10 @@ const Players = ({ freeCradit, setFreeCradit }) => {
             </div>
 
             <div className=" w-max border mt-12 rounded-2xl">
-              <button className="bg-[#E7FE29] rounded-2xl m-2 px-5 py-[14px]">
+              <button
+                onClick={handleAddMorePlayer}
+                className="bg-[#E7FE29] rounded-2xl m-2 px-5 py-[14px]"
+              >
                 Add More Player
               </button>
             </div>

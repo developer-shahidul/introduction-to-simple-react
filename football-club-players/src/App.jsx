@@ -13,7 +13,7 @@ function App() {
   const notify = () => toast.success("Cradit Added to your Account!");
   const handlerFreeCradit = () => {
     notify();
-    const newCradit = parseInt(freeCradit) + 600000000;
+    const newCradit = parseInt(freeCradit) + 60000000;
     setFreeCradit(newCradit);
     // console.log(newCradit);
   };
