@@ -1,5 +1,5 @@
 //
-import logo from "../../assets/football-logo3.jpg";
+import logo from "../../assets/logo2.svg";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="w-4/5 mx-auto pb-16">
         <div className="h-36 w-36 mx-auto mb-16 shadow-red-300  shadow-lg">
           <img
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
             src={logo}
             alt="football logo"
           />
