@@ -24,7 +24,7 @@ function App() {
       <Banner handlerFreeCradit={handlerFreeCradit}></Banner>
       <Players freeCradit={freeCradit} setFreeCradit={setFreeCradit}></Players>
       <Footer></Footer>
-      <ToastContainer position="top-center" />
+      <ToastContainer position="top-center" autoClose={500} />
     </>
   );
 }

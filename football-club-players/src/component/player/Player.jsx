@@ -8,7 +8,7 @@ const Player = ({ player, handleChoosePlayer }) => {
 
   return (
     <div>
-      <div className="border rounded-2xl p-6 ">
+      <div className="border rounded-2xl p-6  ">
         <div className="mb-6">
           <img
             className="h-60 w-full object-cover rounded-2xl"

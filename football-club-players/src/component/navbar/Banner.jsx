@@ -5,9 +5,9 @@ import team from "../../assets/team.jpg";
 
 const Banner = ({ handlerFreeCradit }) => {
   return (
-    <div className="md:mt-6 mt-56 md:w-4/5 mx-auto pt-20 mb-20 px-2 md:px-0">
+    <div className="md:mt-6 mt-60 md:w-4/5 mx-auto pt-20 mb-20 px-1 md:px-0">
       <div
-        className="w-full  md:h-[550px] bg-cover bg-center mx-auto content-center rounded-2xl overflow-hidden  "
+        className="w-auto md:w-full  md:h-[550px] bg-cover bg-center mx-auto content-center rounded-2xl overflow-x-hidden py-6 md:py-0"
         style={{
           backgroundImage: `
     url(${bg}),

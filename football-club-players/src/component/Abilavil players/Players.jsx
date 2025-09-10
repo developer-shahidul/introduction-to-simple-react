@@ -20,6 +20,7 @@ const Players = ({ freeCradit, setFreeCradit }) => {
       .then((res) => res.json())
       .then((data) => setPlayers(data));
   }, []);
+
   // alart
   const notify = () => toast.warning("You can select maximum 11 players!");
   const notify2 = () => toast.warning("You don't have enough money!");
@@ -41,6 +42,10 @@ const Players = ({ freeCradit, setFreeCradit }) => {
   // add more player
 
   const handleAddMorePlayer = () => {
+    if (selectedPlayers.length === 0) {
+      toast.warning("Please select at least one player first!");
+      return;
+    }
     setShowtabs(true);
     setShowOnlyNotSelected(true);
   };
@@ -59,7 +64,7 @@ const Players = ({ freeCradit, setFreeCradit }) => {
     const selectId = players.find((player) => player.id === id);
     if (!selectId) return;
 
-    // judi player id mile jai taile 1 jon oi nibe , warning dibe
+    // judi player id mile jai taile 1 jon oi nibe , warning dibe DUBLICATE CHECK
     const existingplayer = selectedPlayers.find((p) => p.id === id);
     if (existingplayer) {
       toast.warning(
@@ -104,26 +109,26 @@ const Players = ({ freeCradit, setFreeCradit }) => {
 
   return (
     <div>
-      <div className="w-4/5 mx-auto">
-        <div className="flex  justify-end items-center  mb-8">
+      <div className="md:w-4/5 mx-auto px-1 md:px-0">
+        <div className=" flex  md:justify-end items-center  mb-8">
           {/* important class aer bitore functon add */}
-          <div className="border rounded-xl overflow-hidden sticky top-0 bg-white z-50 ">
+          <div className="flex border rounded-xl overflow-hidden  bg-white ">
             <button
               onClick={handleAvailable}
-              className={`px-[30px] py-[14px] text-base font-bold text-[#13131360]  ${tabToggleBg(
+              className={`px-[30px] py-[14px] text-base font-bold text-[#13131360] ${tabToggleBg(
                 true
               )}`}
             >
-              Available
+              Available Players
             </button>
 
             <button
               onClick={handleSelected}
-              className={`px-5 py-[14px] text-base font-bold text-[#13131360]  ${tabToggleBg(
+              className={`px-5 py-[14px] text-base font-bold text-[#13131360] ${tabToggleBg(
                 false
               )}`}
             >
-              Selected ({selectedPlayers.length})
+              Selected Team ({selectedPlayers.length})
             </button>
           </div>
         </div>
@@ -134,10 +139,10 @@ const Players = ({ freeCradit, setFreeCradit }) => {
             <div className="py-3">
               <h5 className="text-[28px] font-bold text-[#131313]">
                 {/* judi showOnlyNotSelected a kiso pawa jai taile admore na paile Available  */}
-
                 {showOnlyNotSelected ? "Add More Players" : "Available Players"}
               </h5>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-6">
               {/* judi showOnlyNotSelected a kiso pawa jai taile notSelectedPlayers na paile players arrow call hobe  */}
 
@@ -184,22 +189,22 @@ const Players = ({ freeCradit, setFreeCradit }) => {
         )}
 
         {/* /subscribe  */}
-        <div className="relative md:w-3/4 mx-auto h-5 mt-96">
+        <div className="relative md:w-3/4 w-full px-1 md:px-0 mx-auto h-5 mt-96">
           <div
             className="absolute left-1/2 top-1/2 w-full  -translate-x-1/2 -translate-y-1/2 border-2
-         border-white rounded-3xl"
+         border-white rounded-3xl "
           >
             <div
-              className="bg-cover h-96 z-40 py-[88px] border
-             rounded-3xl backdrop-blur-3xl  ring-[28px] ring-transparent m-6 "
+              className="bg-cover min-h-80 z-40  border
+             rounded-3xl backdrop-blur-3xl  m-6 "
               style={{
                 backgroundImage: `
                    url(${bg}) 
                 `,
               }}
             >
-              <div className=" md:w-[561px] h-auto mx-auto ">
-                <div className="mb-6 text-center">
+              <div className=" md:w-[561px] h-auto mx-auto py-[88px] ">
+                <div className="mb-6 text-center ">
                   <h3 className="text-3xl font-bold text-[#131313] mb-4">
                     Subscribe to our Newsletter
                   </h3>
@@ -208,7 +213,7 @@ const Players = ({ freeCradit, setFreeCradit }) => {
                   </p>
                 </div>
                 <div>
-                  <form className="md:flex gap-3 ">
+                  <form className="md:flex gap-3">
                     <input
                       className="py-[18px] px-[32px] rounded-xl text-base font-normal text-[#13131340] w-full mb-3 md:mb-0"
                       type="email"
@@ -216,7 +221,7 @@ const Players = ({ freeCradit, setFreeCradit }) => {
                     />
                     <button
                       className="text-base font-bold text-[#131313] py-[18px] px-[30px] rounded-xl md:flex 
-                    bg-gradient-to-r from-[#f19bb3] to-[#f5c451]
+                    bg-gradient-to-r from-[#f19bb3] to-[#f5c451] w-full
                     "
                       type="submit"
                     >
