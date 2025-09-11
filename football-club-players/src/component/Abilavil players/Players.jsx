@@ -110,9 +110,9 @@ const Players = ({ freeCradit, setFreeCradit }) => {
   return (
     <div>
       <div className="md:w-4/5 mx-auto px-1 md:px-0">
-        <div className=" flex  md:justify-end items-center  mb-8">
+        <div className=" flex  md:justify-end items-center  mb-8 sticky md:top-[72px] top-[180px] z-40">
           {/* important class aer bitore functon add */}
-          <div className="flex border rounded-xl overflow-hidden  bg-white ">
+          <div className="flex border rounded-xl overflow-hidden  bg-white  ">
             <button
               onClick={handleAvailable}
               className={`px-[30px] py-[14px] text-base font-bold text-[#13131360] ${tabToggleBg(
@@ -189,10 +189,10 @@ const Players = ({ freeCradit, setFreeCradit }) => {
         )}
 
         {/* /subscribe  */}
-        <div className="relative md:w-3/4 w-full px-1 md:px-0 mx-auto h-5 mt-96">
+        <div className="relative md:w-3/4 w-full px-1 md:px-0 mx-auto h-5 mt-96 ">
           <div
             className="absolute left-1/2 top-1/2 w-full  -translate-x-1/2 -translate-y-1/2 border-2
-         border-white rounded-3xl "
+         border-white rounded-3xl z-10"
           >
             <div
               className="bg-cover min-h-80 z-40  border

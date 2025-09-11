@@ -6,7 +6,7 @@ const Nav = ({ freeCradit }) => {
     <div>
       <nav
         className="md:flex flex-row  justify-between items-center text-center backdrop-blur-3xl
-      fixed top-0 left-0 z-50 w-full opacity-100 md:px-48 px-2"
+      fixed top-0 left-0 z-50 w-full opacity-100 md:px-48 px-2 "
       >
         <div className="mb-5 md:mb-0 ">
           <img
@@ -17,7 +17,7 @@ const Nav = ({ freeCradit }) => {
         </div>
 
         <div>
-          <ul className="grid grid-cols-2 md:grid-flow-col  justify-between items-center md:gap-12 gap-4">
+          <ul className="grid grid-cols-3 md:grid-flow-col  justify-between items-center md:gap-12 gap-4">
             <li className="text-black text-base">
               <a href="">Home</a>
             </li>
@@ -30,7 +30,7 @@ const Nav = ({ freeCradit }) => {
             <li className="text-black text-base">
               <a href="">Schedules</a>
             </li>
-            <li className="px-5 py-4 md:border rounded-xl ">
+            <li className="md:px-5 md:py-4 md:border rounded-xl ">
               {freeCradit}$ Coin 🪙
             </li>
           </ul>
