@@ -13,12 +13,18 @@ const Players = ({ freeCradit, setFreeCradit }) => {
   const [showtabs, setShowtabs] = useState(true);
   // not selected gulu show hobe
   const [showOnlyNotSelected, setShowOnlyNotSelected] = useState(false);
+  //loading
+  const [loading, setLoading] = useState(true);
 
   // load json fetch
   useEffect(() => {
     fetch("players.json")
       .then((res) => res.json())
-      .then((data) => setPlayers(data));
+      .then((data) => {
+        setPlayers(data);
+        setLoading(false);
+      })
+      .catch((err) => toast.warning("error!", err));
   }, []);
 
   // alart
@@ -143,19 +149,43 @@ const Players = ({ freeCradit, setFreeCradit }) => {
               </h5>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-6">
-              {/* judi showOnlyNotSelected a kiso pawa jai taile notSelectedPlayers na paile players arrow call hobe  */}
+            {loading ? (
+              <div className="flex justify-center items-center py-20">
+                {/* Tailwind spinner: border-top transparent gives nice effect */}
+                <div className="w-12 h-12 rounded-full border-4 border-t-4 border-t-blue-500 border-r-transparent border-b-purple-500 border-l-transparent animate-spin"></div>
+              </div>
+            ) : (
+              ((
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-6">
+                  {/* judi showOnlyNotSelected a kiso pawa jai taile notSelectedPlayers na paile players arrow call hobe  */}
 
-              {(showOnlyNotSelected ? notSelectedPlayers : players).map(
-                (player, index) => (
-                  <Player
-                    key={`${player.id}-${index}`}
-                    handleChoosePlayer={handleChoosePlayer}
-                    player={player}
-                  />
-                )
-              )}
-            </div>
+                  {(showOnlyNotSelected ? notSelectedPlayers : players).map(
+                    (player, index) => (
+                      <Player
+                        key={`${player.id}-${index}`}
+                        handleChoosePlayer={handleChoosePlayer}
+                        player={player}
+                      />
+                    )
+                  )}
+                </div>
+              ),
+              (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-6">
+                  {/* judi showOnlyNotSelected a kiso pawa jai taile notSelectedPlayers na paile players arrow call hobe  */}
+
+                  {(showOnlyNotSelected ? notSelectedPlayers : players).map(
+                    (player, index) => (
+                      <Player
+                        key={`${player.id}-${index}`}
+                        handleChoosePlayer={handleChoosePlayer}
+                        player={player}
+                      />
+                    )
+                  )}
+                </div>
+              ))
+            )}
           </div>
         )}
 
