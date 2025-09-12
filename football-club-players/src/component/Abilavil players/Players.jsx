@@ -4,6 +4,11 @@ import Player from "../player/Player";
 import Selected from "../../component/selected players/Selected";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import {
+  getElementByLocalStorage,
+  removeForLocalStorage,
+  addFromLocalStorage,
+} from "../LocalStorage/LocalStorage";
 
 const Players = ({ freeCradit, setFreeCradit }) => {
   const [players, setPlayers] = useState([]);
@@ -15,6 +20,23 @@ const Players = ({ freeCradit, setFreeCradit }) => {
   const [showOnlyNotSelected, setShowOnlyNotSelected] = useState(false);
   //loading
   const [loading, setLoading] = useState(true);
+
+  // localStorage
+
+  useEffect(() => {
+    if (players.length > 0) {
+      const storeCart = getElementByLocalStorage();
+
+      const saveCart = [];
+      for (const id of storeCart) {
+        const foundPlayers = players.find((p) => p.id === id);
+        if (foundPlayers) {
+          saveCart.push(foundPlayers);
+        }
+      }
+      setSelectedPlayers(saveCart);
+    }
+  }, [players]);
 
   // load json fetch
   useEffect(() => {
@@ -63,6 +85,8 @@ const Players = ({ freeCradit, setFreeCradit }) => {
     const remainingplayer = selectedPlayers.filter((p) => p.id !== id);
     toast.warning("Player removed");
     setSelectedPlayers(remainingplayer);
+    // ls
+    removeForLocalStorage(remainingplayer.map((p) => p.id));
   };
 
   const handleChoosePlayer = (id) => {
@@ -105,6 +129,7 @@ const Players = ({ freeCradit, setFreeCradit }) => {
     // console.log(newSelected);
     const newSelected = [...selectedPlayers, selectId];
     setSelectedPlayers(newSelected);
+    addFromLocalStorage(selectId.id);
 
     // freeCradit aer jonno
     setFreeCradit(freeCradit - priceNum);
@@ -116,7 +141,7 @@ const Players = ({ freeCradit, setFreeCradit }) => {
   return (
     <div>
       <div className="md:w-4/5 mx-auto px-1 md:px-0">
-        <div className=" flex  md:justify-end items-center  mb-8 sticky md:top-[72px] top-[180px] z-40">
+        <div className=" flex  md:justify-end items-center   sticky md:top-[72px] top-[180px] z-40">
           {/* important class aer bitore functon add */}
           <div className="flex border rounded-xl overflow-hidden  bg-white  ">
             <button
@@ -152,7 +177,7 @@ const Players = ({ freeCradit, setFreeCradit }) => {
             {loading ? (
               <div className="flex justify-center items-center py-20">
                 {/* Tailwind spinner: border-top transparent gives nice effect */}
-                <div className="w-12 h-12 rounded-full border-4 border-t-4 border-t-blue-500 border-r-transparent border-b-purple-500 border-l-transparent animate-spin"></div>
+                <div className="w-12 h-12 rounded-full border-4 border-blue-500 border-t-transparent animate-spin"></div>
               </div>
             ) : (
               ((
